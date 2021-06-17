@@ -1,0 +1,104 @@
+body { 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 1000px;
+}
+header {
+    height: 50px;
+}
+h1 {
+    margin: 0;
+}
+main {
+    flex: 1;
+    display: flex;
+}
+
+/* 週間カレンダー */
+h2 {
+    font-size: 15px;
+    text-align: center;
+}
+.score {
+    flex: 2;
+}
+.score table {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid grey;
+}
+.score tr {
+    height: 15px;
+}
+.score td {
+    font-size: 10px;
+}
+
+/* カレンダー */
+.cal {
+    flex: 1;
+}
+.cal table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+.cal thead {
+    background-color: rgba(128, 128, 128, 0.2);
+    font-size: 12px;
+    text-align: center;
+}
+.cal td {
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+.cal tbody td {
+    margin: 0;
+    font-size: 10px;
+    vertical-align: top;
+    width: 45px;
+    height: 70px;
+}
+.cal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.J, .international, .euro, .copa-america{
+    text-align: center;
+    color: white;
+    margin-top: 1px;
+}
+.J {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.international {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.euro {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+.copa-america {
+    background-color: rgba(255, 255, 0, 0.8);
+    color: rgb(124, 124, 124);
+    font-weight: 550;
+}
+
+footer {
+    height: 30px;
+}
+footer p {
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    body {
+        width: 100%;
+    }
+    main {
+        display: block;
+    }
+}
