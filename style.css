@@ -1,19 +1,18 @@
-body { 
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 1000px;
+body {
+    margin: 0;
 }
 header {
-    height: 50px;
+    height: 70px;
 }
 h1 {
     margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
 }
-main {
-    flex: 1;
-    display: flex;
+
+td {
+    padding: 0;
 }
 
 /* 週間カレンダー */
@@ -21,26 +20,52 @@ h2 {
     font-size: 15px;
     text-align: center;
 }
-.score {
-    flex: 2;
-}
 .score table {
-    width: 500px;
     margin: 0 auto;
-    border: 1px solid grey;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid rgba(128, 128, 128, 0.5);
 }
-.score tr {
-    height: 15px;
+.score thead td {
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.5);
 }
 .score td {
     font-size: 10px;
+    height: 15px;
+    border-right: 1px solid rgba(128, 128, 128, 0.5);
+}
+.row-line {
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+.time {
+    width: 16px;
+    text-align: center;
+}
+.contents {
+    width: 110px;
+}
+.home {
+    margin: 1px 1px 0 1px;
+}
+.away {
+    margin: 0 1px 1px 1px;
+}
+.same-time {
+    display: flex;
+}
+.same-time-item {
+    flex: 1;
 }
 
 /* カレンダー */
-.cal {
-    flex: 1;
+h3 {
+    text-align: center;
 }
-.cal table{
+.cal {
+    margin: 50px;
+}
+.cal table {
     border-collapse: collapse;
     table-layout: fixed;
     margin: 0 auto;
@@ -65,10 +90,12 @@ h2 {
     padding: 0;
     margin: 0;
 }
-.J, .international, .euro, .copa-america{
+.J,
+.international,
+.euro,
+.copa-america {
     text-align: center;
     color: white;
-    margin-top: 1px;
 }
 .J {
     background-color: rgba(255, 0, 0, 0.5);
@@ -91,14 +118,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 10px;
-    text-align: center;
-}
-
-@media (max-width: 1000px) {
-    body {
-        width: 100%;
-    }
-    main {
-        display: block;
-    }
+    text-align: right;
+    margin-right: 80px;
 }
